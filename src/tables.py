@@ -1,10 +1,11 @@
 from sqlalchemy import Column, Integer
 
-from db import DeclarativeBase, RepresentableTable, noRepr
+from src.db import DeclarativeBase, RepresentableTable
 
 
-class Table(DeclarativeBase, RepresentableTable):
-    __tablename__ = "aboba"
+class Shifts(DeclarativeBase, RepresentableTable):
+    __tablename__ = "shifts"
+    RepresentableTable.noRepr += ["id"]
     id = Column(Integer, primary_key=True)
-
-noRepr += ["id"]
+    rot = Column(Integer)
+    usages = Column(Integer)

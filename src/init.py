@@ -2,7 +2,7 @@ from os import environ
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from db import Database, DeclarativeBase
+from src.db import Database, DeclarativeBase
 
 
 engine = create_engine(environ["DB_URL"])
