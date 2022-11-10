@@ -76,7 +76,7 @@ class Database:
         return self.__get(object).filter(by == value).first()
 
     def get_all(self, object):
-        return self.__get(object)
+        return self.__get(object).all()
     
     def add(self, object):
         self.__add(object)
